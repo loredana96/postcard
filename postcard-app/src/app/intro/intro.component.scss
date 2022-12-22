@@ -1,0 +1,25 @@
+.content-wrapper {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 768px;
+}
+
+.subtitle {
+    width: 100%;
+    font-size: 18px;
+    font-family: sans-serif;
+    padding-top: 50px;
+    color: #d66049;
+}
+
+.title {
+    width: 100%;
+    font-family: 'TT Mussels';
+    font-size: 60px;
+    color: #d66049;
+}
+
+.img {
+    height: 60%;
+}
