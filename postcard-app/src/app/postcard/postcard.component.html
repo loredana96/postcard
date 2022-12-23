@@ -1,1 +1,22 @@
-<p>postcard works!</p>
+<div class="postcard">
+    <div class="form">
+        <input id="intro" class="input" tipe="text">
+        <textarea id="wishes" class=" input" tipe="text"></textarea>
+        <input id="regards" class="input" tipe="text">
+        <input id="name" class="input" tipe="text">
+    </div>
+    <div class="image-wrapper">
+        <input class="button" type="file" (change)="onFileChange($event)" />
+        <div *ngIf="show">
+            <image-cropper [imageChangedEvent]="imgChangeEvt" [maintainAspectRatio]="true" [aspectRatio]="3 / 4"
+                [resizeToWidth]="256" format="png" (imageCropped)="cropImg($event)" (imageLoaded)="imgLoad()"
+                (cropperReady)="initCropper()" (loadImageFailed)="imgFailed()">
+            </image-cropper>
+        </div>
+        <button *ngIf="show" (click)="hideImage()">I like it</button>
+        <div>
+            <h6 *ngIf="show">Image Preview</h6>
+            <img [src]="cropImgPreview" />
+        </div>
+    </div>
+</div>

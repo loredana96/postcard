@@ -1,0 +1,55 @@
+.postcard {
+    height: 768px;
+    display: flex;
+    flex-direction: row;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    width: 60%;
+    margin-left: auto;
+    background: transparent;
+    outline: none;
+    border: 0;
+    border-bottom: solid 2px rgba(248, 158, 158, 0.6);
+}
+
+#intro {
+    font-family: 'TT Mussels';
+    font-size: 35px;
+    color: #d66049;
+}
+
+#wishes {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #d66049;
+    overflow: visible;
+    height: 150px;
+    resize: none;
+}
+
+#regards {
+    font-family: sans-serif;
+    font-size: 24px;
+    color: #d66049;
+    text-align:right;
+}
+
+#name {
+    font-family: sans-serif;
+    font-size: 24px;
+    color: #d66049;
+    text-align:right;
+}
+
+.image-wrapper {
+    padding-left: 40px;
+}
