@@ -1,25 +1,36 @@
 .content-wrapper {
-    padding: 40px;
+    background-image: url(/assets/thank-you.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    height: 100vh;
+    color: #fff;
     display: flex;
-    flex-direction: column;
-    height: 768px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    z-index: -2;
 }
 
-.subtitle {
+.content-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    font-size: 18px;
-    font-family: sans-serif;
-    padding-top: 50px;
-    color: #d66049;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
 }
 
-.title {
-    width: 100%;
-    font-family: 'TT Mussels';
-    font-size: 60px;
-    color: #d66049;
+.content-wrapper h1 {
+    font-size: 45px;
+    margin: -20px 0 20px;
 }
 
-.img {
-    height: 60%;
+.content-wrapper p {
+    font-size: 20px;
+    letter-spacing: 1px;
 }
