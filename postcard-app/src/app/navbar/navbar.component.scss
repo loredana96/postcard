@@ -42,7 +42,54 @@
     padding: 10px 0;
 }
 
-.nav a.selected, .nav a:hover {
+.nav a.selected,
+.nav a:hover {
     color: #c0392b;
     font-weight: bold;
 }
+
+.phone-navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-top: -5px;
+    width: 100%;
+}
+
+.phone-navbar ul {
+    background-color: #fff;
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    padding-bottom: 70px;
+    margin: 0;
+    height: 60px;
+
+}
+
+.phone-navbar li {
+    color: #777;
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+.phone-navbar ul li p {
+    font-size: 12px;
+    margin: 2px 0;
+}
+
+.phone-navbar ul li.active {
+    color: #c0392b;
+}
+
+@media screen and (min-width: 0px) and (max-width: 400px) {
+    .phone-navbar { display: block; }  /* show it on small screens */
+    .nav { display: none; }
+
+  }
+  
+  @media screen and (min-width: 401px) and (max-width: 1024px) {
+    .phone-navbar { display: none; }   /* hide it elsewhere */
+    .nav { display: block; }
+  }
