@@ -1,9 +1,8 @@
 .postcard {
-    height: 768px;
     display: flex;
     flex-direction: row;
-    padding-right: 40px;
-    padding-left: 40px;
+    justify-content: space-around;
+    margin-top: 50px;
 }
 
 .form {
@@ -14,7 +13,6 @@
 
 .input {
     width: 60%;
-    margin-left: auto;
     background: transparent;
     outline: none;
     border: 0;
@@ -51,5 +49,14 @@
 }
 
 .image-wrapper {
-    padding-left: 40px;
+    display: flex;
+    flex-direction: row;
+    .image-cropper {
+        width: 320px;
+        z-index: -1;
+    }
 }
+
+input[type='file'] {
+    color: rgba(0, 0, 0, 0)
+  }

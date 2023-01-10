@@ -7,15 +7,15 @@ import { ImageCroppedEvent } from 'ngx-image-cropper';
   styleUrls: ['./postcard.component.scss']
 })
 export class PostcardComponent {
-  show = true;
+  showPreview = false;
   imgChangeEvt: any = '';
   cropImgPreview: any = '';
   onFileChange(event: any): void {
-    this.show = true;
+    this.showPreview = true;
     this.imgChangeEvt = event;
   }
   cropImg(e: ImageCroppedEvent) {
-      this.cropImgPreview = e.base64;
+    this.cropImgPreview = e.base64;
   }
   imgLoad() {
       // display cropper tool
@@ -29,6 +29,6 @@ export class PostcardComponent {
   }
 
   hideImage() {
-    this.show = false;
+    this.showPreview = false;
   }
 }

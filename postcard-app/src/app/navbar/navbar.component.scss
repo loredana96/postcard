@@ -84,12 +84,12 @@
 }
 
 @media screen and (min-width: 0px) and (max-width: 400px) {
-    .phone-navbar { display: block; }  /* show it on small screens */
+    .phone-navbar { display: block; }
     .nav { display: none; }
 
   }
   
-  @media screen and (min-width: 401px) and (max-width: 1024px) {
-    .phone-navbar { display: none; }   /* hide it elsewhere */
+  @media screen and (min-width: 401px) {
+    .phone-navbar { display: none; }
     .nav { display: block; }
   }
