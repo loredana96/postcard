@@ -1,6 +1,6 @@
 <div class="postcard">
     <div class="image-wrapper">
-        <input *ngIf="!showPreview"  class="button" type="file" (change)="onFileChange($event)" />
+        <img *ngIf="showPlaceholderImage" class="postcard-image" src="assets/R.png"/>
         <div class="image-cropper" *ngIf="showPreview">
             <image-cropper [imageChangedEvent]="imgChangeEvt" [maintainAspectRatio]="true" [aspectRatio]="3 / 4"
                 [resizeToWidth]="256" format="png" (imageCropped)="cropImg($event)" (imageLoaded)="imgLoad()"
@@ -8,10 +8,11 @@
             </image-cropper>
         </div>
         <div class="image-preview">
+
             <button *ngIf="showPreview" (click)="hideImage()">I like it</button>
             <div>
                 <h6 *ngIf="showPreview">Image Preview</h6>
-                <img [src]="cropImgPreview" />
+                <img class="postcard-image" [src]="cropImgPreview" />
             </div>
         </div>
     </div>
@@ -22,3 +23,4 @@
         <input id="name" class="input" tipe="text">
     </div>
 </div>
+<input *ngIf="!showPreview"  class="button" type="file" (change)="onFileChange($event)" />

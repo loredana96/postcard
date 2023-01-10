@@ -1,7 +1,8 @@
 .postcard {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: row;
-    justify-content: space-around;
     margin-top: 50px;
 }
 
@@ -54,6 +55,10 @@
     .image-cropper {
         width: 320px;
         z-index: -1;
+    }
+    .postcard-image {
+        width: 256px;
+        padding-right: 30px;
     }
 }
 

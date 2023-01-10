@@ -8,6 +8,7 @@ import { ImageCroppedEvent } from 'ngx-image-cropper';
 })
 export class PostcardComponent {
   showPreview = false;
+  showPlaceholderImage = true;
   imgChangeEvt: any = '';
   cropImgPreview: any = '';
   onFileChange(event: any): void {
@@ -18,7 +19,7 @@ export class PostcardComponent {
     this.cropImgPreview = e.base64;
   }
   imgLoad() {
-      // display cropper tool
+      this.showPlaceholderImage = false;
   }
   initCropper() {
       // init cropper
